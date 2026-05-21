@@ -14,6 +14,7 @@ The core idea is simple: Markdown remains the human-readable source of truth, SQ
 - Provides an `ask` workflow that retrieves relevant wiki pages and sends them to the user's local Ollama agent.
 - Can run as a command-line tool, a Python library, or an MCP stdio server.
 
+<img src="./images/Startup_Screenshot.jpg" width=100%>
 
 ## Install
 

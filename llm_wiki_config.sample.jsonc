@@ -1,0 +1,40 @@
+{
+  // Copy this file to wiki_vault/llm_wiki_config.json and edit as needed.
+  // Comments beginning with // or # are supported by the LLM Wiki config loader.
+  "ollama": {
+    "host": "http://localhost:11434",
+    // Example for an Ollama server on another machine in your LAN:
+    // "host": "http://192.168.1.100:11434",
+
+    "model": "llama3.2:3b",
+    // Larger GPU-backed example:
+    // "model": "gpt-oss:20b",
+
+    "temperature": 0.2,
+    "timeout_seconds": 120,
+    "top_k": 5,
+    "max_context_chars": 12000,
+    "max_chars_per_article": 4000
+  },
+  "ask": {
+    "recursive_enabled": true,
+    "compress_history": true,
+    "max_tool_calls": 5,
+    "max_history_tokens": 4000,
+    "history_enabled": true,
+    "history_file": "ask_history.jsonl",
+    "context_budget_tokens": 24000,
+    "history_budget_tokens": 3000,
+    "source_budget_tokens": 6000,
+    "max_sources": 8,
+    "full_page_threshold": 3
+  },
+  "wiki": {
+    "default_top_k": 5,
+    "context_char_limit": 12000
+  },
+  "cli": {
+    "color": "auto",
+    "json_output": false
+  }
+}

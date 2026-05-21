@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-wiki-mcp"
+version = "0.1.0"
+description = "Local-first Markdown LLM Wiki MCP server, Python context library, and user CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Martin Timms and Vishva AI"}]
+dependencies = []
+# Optional document ingestion extras: pip install -e .[docs]
+
+[project.optional-dependencies]
+mcp = ["mcp>=0.1.0"]
+docs = ["pypdf>=0.1.0", "python-docx>=0.1.0"]
+
+[project.scripts]
+llm-wiki-mcp = "llm_wiki_mcp.server:main"
+llm-wiki = "llm_wiki_mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/Electro-resonance/LLM-WIKI-MCP"
+Repository = "https://github.com/Electro-resonance/LLM-WIKI-MCP"
+Issues = "https://github.com/Electro-resonance/LLM-WIKI-MCP/issues"
